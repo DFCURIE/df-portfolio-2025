@@ -2,7 +2,6 @@ import { MeshRenderer } from "../defaults/renderer";
 import { SliderImageMesh } from "./item";
 
 export class ImageRenderer extends MeshRenderer {
-
     meshItems: SliderImageMesh[];
     images: HTMLImageElement[];
 
@@ -32,5 +31,4 @@ export class ImageRenderer extends MeshRenderer {
 
         super.render();
     }
-
 }

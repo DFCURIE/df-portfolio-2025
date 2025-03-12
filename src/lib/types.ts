@@ -1,4 +1,3 @@
-
 export type SiteData = {
     availablity_date: string
 }

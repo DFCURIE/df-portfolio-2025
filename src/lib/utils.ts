@@ -2,7 +2,7 @@ import { imgPromises } from "./store";
 
 // Load images asynchronously during page loading animation
 export async function loadImage(src: string) {
-    const promise =  new Promise(async (resolve: (src: string) => void, reject) => {
+    const promise = new Promise(async (resolve: (src: string) => void, reject) => {
         const blob = await (await fetch(src)).blob();
         const reader = new FileReader();
         reader.readAsDataURL(blob);
@@ -22,6 +22,7 @@ export function fetchJsonData(sourceFile: string) {
     });
 }
 
+// Tambahkan fungsi onScrolledIntoView yang dibutuhkan work.svelte
 export function onScrolledIntoView(node: HTMLElement, entryInView: (entry: IntersectionObserverEntry) => void) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

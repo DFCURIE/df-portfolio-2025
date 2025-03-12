@@ -1,8 +1,7 @@
-
 import * as THREE from "three";
 
 export class ImageMesh {
-
+    // Properti instance
     element: HTMLImageElement; 
     dimensionsNode: HTMLElement; 
     scene: THREE.Scene; 
@@ -14,24 +13,12 @@ export class ImageMesh {
     activeFragmentShader: string;
 
     uniforms: {
-        uTexture?: {
-            value: THREE.Texture
-        },
-        uMeshSize?: {
-            value: THREE.Vector2
-        },
-        uImgSize?: {
-            value: THREE.Vector2
-        },
-        uTime?: {
-            value: number;
-        };
-        uOffset?: {
-            value: THREE.Vector2;
-        };
-        uAlpha?: {
-            value: number;
-        };
+        uTexture?: { value: THREE.Texture },
+        uMeshSize?: { value: THREE.Vector2 },
+        uImgSize?: { value: THREE.Vector2 },
+        uTime?: { value: number; };
+        uOffset?: { value: THREE.Vector2; };
+        uAlpha?: { value: number; };
     };
 
     shaders: {
@@ -43,10 +30,10 @@ export class ImageMesh {
         this.element = element;
         this.scene = scene;
         this.shaders = shaders;
-        this.uniforms = uniforms;
+        this.uniforms = uniforms || {};
         this.dimensionsNode = dimensionsNode;
-        this.offset = new THREE.Vector2(0, 0); // Mesh Position
-        this.sizes = new THREE.Vector2(0, 0); // Mesh Size
+        this.offset = new THREE.Vector2(0, 0); // Posisi Mesh
+        this.sizes = new THREE.Vector2(0, 0); // Ukuran Mesh
 
         this.createMesh();
     }
@@ -59,18 +46,18 @@ export class ImageMesh {
 
     createMesh(): void {
         this.setDimensions();
-        this.geometry = new (THREE as any).PlaneBufferGeometry(1, 1, 4, 6);
+        this.geometry = new THREE.PlaneBufferGeometry(1, 1, 4, 6);
 
         const { width, height } = this.element.getBoundingClientRect();
 
         this.uniforms = {
-            uTexture: { // Image Texture
+            uTexture: { // Texture Gambar
                 value: new THREE.TextureLoader().load(this.element.src)
             },
-            uMeshSize: { // Mesh (Mask) Dimensions
+            uMeshSize: { // Dimensi Mesh (Mask)
                 value: new THREE.Vector2(this.sizes.x, this.sizes.y)
             },
-            uImgSize: { // Image (to be masked) dimensions
+            uImgSize: { // Dimensi Gambar (untuk di-mask)
                 value: new THREE.Vector2(width, height)
             },
             ...this.uniforms
@@ -114,7 +101,7 @@ export class ImageMesh {
         });
     }
 
-    // Loads correct fragment shader based on aspect ratio
+    // Memuat fragment shader yang tepat berdasarkan aspect ratio
     private get loadFragmentShader(): string {
         if ((this.sizes.x / this.sizes.y) < 1) {
             return this.shaders.fragment.horizontal;
@@ -123,4 +110,3 @@ export class ImageMesh {
         }
     }
 }
-
