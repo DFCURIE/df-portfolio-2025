@@ -3662,13 +3662,13 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body: body2, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="UTF-8">\n	<meta http-equiv="X-UA-Compatible" content="IE=edge">\n	<meta name="viewport" content="width=device-width, initial-scale=1.0">\n\n	<title>Musab Hassan — Web Developer</title>\n\n	<link rel="icon" href="' + assets2 + `/favicon.ico" />
+    app: ({ head, body: body2, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="UTF-8">\n	<meta http-equiv="X-UA-Compatible" content="IE=edge">\n	<meta name="viewport" content="width=device-width, initial-scale=1.0">\n\n	<title>Dfcurie — Web Designer and Developer</title>\n\n	<link rel="icon" href="' + assets2 + `/favicon.ico" />
 
 	<!-- Font imports in global.css  -->
 
 	<!-- Google Analytics -->
 	<script defer src="https://www.googletagmanager.com/gtag/js?id=G-7XXPE0DV47"><\/script>
-	<script lang="text/javascript"">
+	<script lang="text/javascript">
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
@@ -3677,10 +3677,10 @@ const options = {
 	<\/script>
 
 	<!-- SEO -->
-	<meta name="keywords" content="Musab, Hassan, Musab Hassan, Portfolio, Web Developer, Designer, Website, Developer, Kelowna, Canada, British Columbia, Okanagan, Freelance">
-	<meta name="author" content="Musab Hassan">
+	<meta name="keywords" content="Dfcurie, Difamuhammad, otherdfcurie, Portfolio, Web Developer, Designer, Website, Developer, Bandung, Indonesia, Jakarta, Full Stack, Freelance">
+	<meta name="author" content="Dfcurie">
 	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
-	<meta name="description" content="Portfolio and personal website of Musab Hassan, a web developer from British Columbia, Canada.">
+	<meta name="description" content="Portfolio and personal website of Dfcurie/Difamuhammad, a web developer from Bandung, Indonesia.">
 
 	` + head + '\n</head>\n\n<body>\n	<div style="display: contents">\n		' + body2 + "\n	</div>\n</body>\n\n</html>",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
@@ -3754,7 +3754,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "ttnoov"
+  version_hash: "10dehne"
 };
 async function get_hooks() {
   let handle;

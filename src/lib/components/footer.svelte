@@ -49,18 +49,6 @@
                 easing: 'cubic-bezier(.47,.41,.26,1)',
                 fill: 'forwards' 
             });
-            signaturePath3.animate(animation, {
-                duration: 200,
-                delay: 1300,
-                easing: 'cubic-bezier(.47,.41,.26,1)',
-                fill: 'forwards' 
-            });
-            signaturePath4.animate(animation, {
-                duration: 1000,
-                delay: 1500,
-                easing: 'cubic-bezier(.47,.41,.26,1)',
-                fill: 'forwards' 
-            });
         });
     }
 
@@ -89,28 +77,23 @@
                     </p>
                 {:else}
                     <p class="large-text" bind:this={statusElement}>
-                        i am available for freelance work after <br> {siteData.availablity_date}.
+                        i'm available for freelance work <br>
                     </p>
                 {/if}
-            <a class="button large-text" bind:this={fullEmailLinkElement} href="mailto:musabhassan04@gmail.com" target="_blank">musabhassan04@gmail.com</a>
+            <a class="button large-text" bind:this={fullEmailLinkElement} href="mailto:difamuhammad28@gmail.com" target="_blank">difamuhammad28@gmail.com</a>
         </div>
         
         <div class="credits-wrapper" bind:this={creditsElement}>
             <p class="year">© {currentYear}</p>
             <p class="credits">
-                designed and developed by Musab Hassan<br>
-                
-                <!-- Support the project by keeping this line in your fork -->
-                <a class="clickable button no-decor" href="https://github.com/Musab-Hassan/musabhassan.com" target="_blank">
-                    this website is open source on github
-                </a>
+                designed and developed by Difamuhammad/Dfcurie<br>
             </p>
         </div>
     </div>
 
     <!-- Right side -->
 	<div class="flex-wrapper decor">
-        <!-- Musab Hassan SVG Signature -->
+        <!-- SVG Signature -->
         <svg id="signature" class="name-signature" x="0px" y="0px" viewBox="0 0 190 136.9" style="stroke: rgb(79, 78, 85);">
             <g>
                 <path
@@ -123,22 +106,10 @@
                     class="path-2"
                     style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
                     d="M132.2,48.3l-23.9,78.8"/>
-                <path
-                    bind:this={signaturePath3}
-                    class="path-3"
-                    style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-                    d="M110.3,55.3c0,0-0.7,11.7-2.8,18s-6.7,20.2-6.9,24.1"/>
-                <path
-                    bind:this={signaturePath4}
-                    class="path-4"
-                    style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-                    d="M122,74.4c0,0-5.9-8-17.1-6.7c-11.1,1.3-20.2,11.3-21.1,12.6c-0.9,1.3-10,9.6,2.2,15s38.9-7.2,38.9-7.2s17.8-10,18.9-10s-4.6,5.9-4.3,7.2c0.4,1.3,2.8,2,7.2-1.5c1-0.8,17.2-0.8,22.2,1c1.9,0.7,3.5-0.2,5-1.4c1-0.8,9.4,2,9.4,2"/>
             </g>
         </svg>
     </div>
 </div>
-
-
 
 <style lang="sass">
 
@@ -147,7 +118,7 @@
 
 .footer-wrapper
     width: 100vw
-    background-color: #131314
+    background-color: #06070B
     display: flex
     flex-direction: row
     justify-content: space-between
@@ -226,13 +197,5 @@
     .path-2
         stroke-dasharray: 85
         stroke-dashoffset: 85
-
-    .path-3
-        stroke-dasharray: 45
-        stroke-dashoffset: 45
-
-    .path-4
-        stroke-dasharray: 180
-        stroke-dashoffset: 180
 
 </style>

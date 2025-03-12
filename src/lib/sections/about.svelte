@@ -46,38 +46,40 @@
 
 <div id="content-container" class="about" bind:this={section1Element}>
 	{#await sectionOnePromise then _}
-		<div class="content-wrapper">
-			<h1 class="title" use:titleIn>
-				Hey I'm <br>Musab
-			</h1>
-			<div in:maskSlideIn={{ duration: 1200, reverse: true, delay: 150 }}>
-				<p class="paragraph">
-					I'm a web developer from British Columbia, Canada. I specialize in designing and developing web experiences<br><br>I work with organizations and individuals to create beautiful, responsive, and scalable web products tailor-made for them. Think we can make something great together? Let's talk over email.
-				</p>
-			</div>
-			<div class="social-button-wrapper">
-				<div in:maskSlideIn={{ delay: 400, reverse: true }}>
-					<span class="button"><a href="mailto:musabhassan04@gmail.com" target="_blank" class="clickable sublink link">Email Me</a></span>
-				</div>
-				<div in:maskSlideIn={{ delay: 700, reverse: true }}>
-					<span class="button"><a href="https://github.com/Musab-Hassan" target="_blank" class="clickable sublink link">Github</a></span>
-				</div>
-			</div>
+	  <div class="content-wrapper">
+		<h1 class="title" use:titleIn>
+		  Hey I'm <br>Dfcurie
+		</h1>
+		<div in:maskSlideIn={{ duration: 1200, reverse: true, delay: 150 }}>
+		  <p class="paragraph">
+			I'm a web designer my real name is Muhammad Difa Dhiyaul Haq. I specialize in designing and developing web experiences<br><br>Are you seeking to elevate your online presence with a stunning, adaptable, and scalable web solution? I specialize in crafting bespoke web products tailored precisely to your needs. Whether you're an organization or an individual, let's collaborate to create something extraordinary. Reach out to start the conversation via email!.
+		  </p>
 		</div>
-		<div class="profile-image" use:addSlickScrollOffset>
-			{#await loadImage("assets/imgs/profile-photo.jpg") then src}
-				<img src="{src}" in:maskSlideIn={{ duration: 1200,
-					delay: 100,
-					reverse: true,
-					maskStyles: [
-						{ property: "width", value: "100%"},
-						{ property: "height", value: "100%"}
-					]
-				}} alt="Musab's Profile" class="profile-pic">
-			{/await}
-		</div>
+		<div class="social-button-wrapper">
+			<div in:maskSlideIn={{ delay: 400, reverse: true }}>
+			  <span class="button"><a href="mailto:difamuhammad28@gmail.com" target="_blank" class="clickable sublink link">Email Me</a></span>
+			</div>
+			<div in:maskSlideIn={{ delay: 700, reverse: true }}>
+			  <span class="button"><a href="https://github.com/DFCURIE" target="_blank" class="clickable sublink link">Github</a></span>
+			</div>
+			<div in:maskSlideIn={{ delay: 1000, reverse: true }}>
+			  <span class="button"><a href="https://www.linkedin.com/in/muhammad-difa-dhiyaul-haq-a40851234/" target="_blank" class="clickable sublink link">LinkedIn</a></span>
+			</div>
+			<!-- Bagian baru untuk Instagram -->
+			<div in:maskSlideIn={{ delay: 1300, reverse: true }}>
+			  <span class="button"><a href="https://www.instagram.com/otherdfcurie?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="clickable sublink link">Instagram</a></span>
+			</div>
+		  </div>
+		  
+	  </div>
+	  <div class="profile-image" use:addSlickScrollOffset>
+		{#await loadImage("assets/imgs/profile-photo.png") then src}
+		  <img src="{src}" in:maskSlideIn={{ duration: 1200, delay: 100, reverse: true, maskStyles: [{ property: "width", value: "100%"}, { property: "height", value: "100%"}]}} alt="DF's Profile" class="profile-pic">
+		{/await}
+	  </div>
 	{/await}
-</div>
+  </div>
+  
 
 <div class="horizontal-flex" bind:this={section2Element}>
 	{#await sectionTwoPromise then _}
@@ -130,12 +132,12 @@
 		<ul class="list">
 			<li class="list-title">
 				<div in:letterSlideIn={{ initDelay: 400 }}>
-					awards
+					Bachelor's Degree
 				</div>
 			</li>
 			<li>
 				<div in:letterSlideIn={{ initDelay: 550 }}>
-					1x — Awwwards Honors
+					Computer Engineering
 				</div>
 			</li>
 		</ul>
@@ -148,7 +150,8 @@
 @import "../consts.sass"
 @include textStyles()
 
-#content-container.about
+/* svelte-ignore */
+#content-container.about 
 	display: flex
 	flex-direction: row
 	justify-content: space-between
@@ -234,6 +237,7 @@
 		.profile-image
 			display: none
 
+/* svelte-ignore */
 .horizontal-flex
 	display: flex
 	flex-direction: row

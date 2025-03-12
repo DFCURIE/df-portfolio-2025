@@ -1,32 +1,94 @@
 [
     {
-        "id": "lcml",
-        "title": "Life-Cycle Managment Laboratory",
+        "id": "opt",
+        "title": "Workflow Automation",
         "details": {
-            "description": "A single page web application for managing research and administrative content for LCML at the University of British Columbia",
+            "description": "Optiflow AI-Driven Workflow Automation",
             "summary": "Web Application"
         },
-        "date": "April 2022",
+        "date": "March 2024",
         "roles": [
             "UI/UX Designer",
-            "Full-Stack Web Developer"
+            "Frontend Engineer",
+            "Database Engineer"
         ],
         "links": [
             {
                 "type": "web",
                 "text": "Visit Site",
-                "link": "https://lcml.engineering.ok.ubc.ca"
+                "link": "https://automation.connectowl.io/signin"
             }
         ]
     },
     {
-        "id": "v1",
-        "title": "Portfolio 2021",
+        "id": "adm",
+        "title": "Admin Console Role Management",
         "details": {
-            "description": "My personal portfolio website with a full showcase of my completed projects. Received the Awwwards Honorable Mention.",
-            "summary": "Personal Portfolio"
+            "description": "Microservices Admin Console Management",
+            "summary": "Web Application"
         },
-        "date": "May 2021",
+        "date": "May 2024",
+        "roles": [
+            "UI/UX Designer",
+            "Full Stack Engineer",
+            "Database Engineer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://optiflow.connectowl.io/auth/login"
+            }
+        ]
+    },
+    {
+        "id": "lms",
+        "title": "Learning Management System",
+        "details": {
+            "description": "LMS For Briton English School",
+            "summary": "Web Design"
+        },
+        "date": "October 2024",
+        "roles": [
+            "UI/UX Designer",
+            "Frontend Engineer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://briton-lms.connectowl.io/login/index.php"
+            }
+        ]
+    },
+    {
+        "id": "swp",
+        "title": "Space-Web porto",
+        "details": {
+            "description": "Space-themed web portfolio using next js",
+            "summary": "Web Design"
+        },
+        "date": "december 2023",
+        "roles": [
+            "UI/UX Designer",
+            "Web Developer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://dfportfolio.vercel.app/"
+            }
+        ]
+    },
+    {
+        "id": "apre",
+        "title": "Redesign Apple Vision Pro Website",
+        "details": {
+            "description": "Apple Vision Pro web redesign, with a more informative look plus 3D animation and interactive motion.",
+            "summary": "Web Design"
+        },
+        "date": "Jan 2024",
         "roles": [
             "UI/UX Designer",
             "Front-end Web Developer"
@@ -35,74 +97,49 @@
             {
                 "type": "web",
                 "text": "Visit Site",
-                "link": "https://v1.musabhassan.com"
+                "link": "https://apredesign-nvl3w9vr6-dfcuries-projects.vercel.app/"
             }
         ]
     },
     {
-        "id": "kic",
-        "title": "Kelowna Islamic Center",
+        "id": "3da",
+        "title": "3D Animation",
         "details": {
-            "description": "A multi-platform solution consisting of mobile apps, a web app, and server-side solutions for Kelowna Islamic Center.",
-            "summary": "Multi-platform Solutions"
+            "description": "3d animation web design, HTML, CSS, JS using locomotive.",
+            "summary": "3D Web"
         },
-        "date": "July 2019",
+        "date": "March 2024",
         "roles": [
             "UI/UX Designer",
-            "Mobile Developer w/ Flutter",
-            "Full-Stack Web Developer"
-        ],
-        "links": [
-            {
-                "type": "android",
-                "text": "View on Google Play",
-                "link": "https://play.google.com/store/apps/details?id=com.kelownamasjid.android.app"
-            },
-            {
-                "type": "ios",
-                "text": "View on App Store",
-                "link": "https://apps.apple.com/us/app/kelowna-islamic-center/id1479503537?ls=1"
-            }
-        ]
-    },
-    {
-        "id": "grillzzy",
-        "title": "Grillzzy Foods",
-        "details": {
-            "description": "Iconography, branding, and website for a Canadian meat and manufacturing processing start-up",
-            "summary": "Brand Website"
-        },
-        "date": "Nov 2020",
-        "roles": [
-            "Brand Designer",
-            "Web Designer",
-            "Front-End Web Developer"
+            "Web Developer"
         ],
         "links": [
             {
                 "type": "web",
                 "text": "Visit Site",
-                "link": "https://grillzzy.com"
+                "link": "https://3-d-animation-hk7scz4kz-dfcuries-projects.vercel.app/"
             }
         ]
     },
+
     {
-        "id": "slickscroll",
-        "title": "SlickScroll",
+        "id": "cui",
+        "title": "Responsive Design UI",
         "details": {
-            "description": "An open-source library for developers to easily add smooth scrolling effects to their webpages",
-            "summary": "Personal Project"
+        "description": "responsive web with modern design for AI chatting.",
+        "summary": "Modern Web"
         },
-        "date": "March 2021",
+        "date": "March 2024",
         "roles": [
-            "Maintainer"
+        "UI/UX Designer",
+        "Web Developer"
         ],
         "links": [
-            {
-                "type": "web",
-                "text": "View on Github",
-                "link": "https://github.com/Musab-Hassan/slickscroll"
-            }
-        ]
-    }
+        {
+            "type": "web",
+            "text": "Visit Site",
+            "link": "https://chatbot-ui-liard-seven.vercel.app/"
+        }
+    ]
+}
 ]

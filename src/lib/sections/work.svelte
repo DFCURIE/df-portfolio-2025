@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import { getGPUTier } from 'detect-gpu';
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
@@ -18,6 +19,7 @@
 	let isMouseDown: boolean = false;
 	isWorkScroll.subscribe(val => isMouseDown = val);
 
+
 	let workContainer: HTMLElement;
 	let container: HTMLElement, listContainer: HTMLElement; // Containers for Three meshes
 	let images: HTMLImageElement[] = []; // Array of images to be passed to WebGL Shader
@@ -31,8 +33,10 @@
 		inViewResolve = resolve;
 	});
 
+
 	// Slider calculations and rendering
 	class WorkSlider {
+
 		currentMouseX = 0; 
 		initialMouseX = 0;
 		currentPosition = 0; 
@@ -51,6 +55,7 @@
 			if (isMouseDown) {
 				let style = window.getComputedStyle(listContainer);
 				let matrix = new WebKitCSSMatrix(style.transform);
+
 				this.initialPosition = matrix.m41;
 			}
 		}
@@ -91,9 +96,12 @@
 		}
 	}
 
+
+	
 	const slider = new WorkSlider();
 
 	onMount(async () => {
+
 		onScrolledIntoView(workContainer, () => inViewResolve(true));
 
 		// GPU Tier to decide if effects should be enabled
@@ -122,9 +130,14 @@
 			onComplete: () => breakTitleWords=true
 		});
 	}
+
 </script>
 
-<div id="content-container" class="work-click-area" bind:this={workContainer}>
+
+
+
+<div id="content-container" class="work-click-area" bind:this="{ workContainer }">
+
 	<div class="content-wrapper" 
 		role="listbox"
 		tabindex="0"
@@ -278,10 +291,13 @@
 	</div>
 </div>
 
+
 <style lang="sass">
+
 @import "../consts"
 @include textStyles()
 
+/* svelte-ignore */
 #content-container.work-click-area
 	margin-top: 30vh
 
@@ -639,4 +655,5 @@
 
 					.item-title
 						font-size: 4.5vh
+
 </style>
